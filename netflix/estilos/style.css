@@ -1,0 +1,408 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+a#login {
+    background-color: #E50914;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color .5s;
+    padding: 6px 20px;
+    border-radius: 5px;
+    margin: 30px 55px;
+}
+
+a#login:hover {
+    background-color: #CE0812;
+}
+
+div#principal {
+    height: 675px;
+    background: black url(./../imagens/background.jpg) center center no-repeat scroll;
+    background-size: cover;
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+div#principal > header {
+    height: 100px;
+}
+
+div#principal > header > img {
+    float: left;
+    height: 45.5px;
+    margin: 27px 24px;
+}
+
+div#principal > header > a {
+    float: right;
+}
+
+div#principal > main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: calc(100% - 245px);
+}
+
+div#principal > main > h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+div#principal > main > p {
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 60px;
+}
+
+div#principal > main a {
+    color: white;
+    text-decoration: none;
+    background-color: #E50914;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color .5s;
+}
+
+div#principal > main a:hover {
+    background-color: #CE0812;
+}
+
+div#selecoes {
+    display: flex;
+    background-color: #141414;
+    border-bottom: 3px solid #3D3D3D;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+div#selecoes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: calc(100% - 4px);
+}
+
+div#selecoes div {
+    color: #8f8f8f;
+    cursor: pointer;
+}
+
+div#selecoes div#escolhido {
+    border-bottom: 4px solid red;
+}
+
+div#selecoes div:hover {
+    color: #fff;
+}
+
+div#telas {
+    margin-top: 50px;
+    color: white;
+}
+
+div#tela1 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 50vw;
+    display: inline-block;
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: normal;
+}
+
+.botao-wf {
+    margin: auto;
+    margin-top: 15px;
+    background-color: #E50914;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+div#tela1 > div {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+div#tela1 > img {
+    margin-top: 25px;
+    width: 55vw;
+}
+
+div#tela2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#tela2 div#caixa-txt-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+div#tela2 img {
+    margin-top: 40px;
+    width: 55vw;
+}
+
+div#tela2 h2 {
+    width: 50vw;
+    font-size: 19px;
+    text-align: center;
+    transform: translateX(5%);
+    margin-bottom: 25px;
+}
+
+div#tela2 p {
+    display: inline-block;
+    width: 50vw;
+    text-align: center;
+    font-size: 1em;
+    color: #8f8f8f;
+    transform: translateX(5%);
+}
+
+div#tela3 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#tela3 > table {
+    margin-top: 25px;
+    width: 70vw;
+    border-collapse: collapse;
+} 
+
+div#tela3 th {
+    background-color: #000000;
+    width: 15%;
+    padding: 15px 20px;
+}
+
+div#tela3 .info {
+    width: 55%;
+}
+
+div#tela3 td {
+    padding: 15px 20px;
+}
+
+div#tela3 .num {
+    text-align: center;
+}
+
+div#tela3 tr:nth-child(odd) {
+    background-color: #222222;
+    color: #8f8f8f;
+}
+
+div#tela3 .tabledata {
+    width: 100%;
+}
+
+footer {
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+footer > div#secoes {
+    display: flex;
+    justify-content: center;
+}
+
+footer div#esq {
+    float: left;
+}
+
+footer div#esq > div > p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer div#dir {
+    margin-top: 15px;
+    float: right;
+}
+
+footer div#dir > div#cima {
+    margin-bottom: 55px;
+}
+
+footer div#esq > div, footer div#dir > div {
+    width: 35vw;
+    margin-top: 30px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a, footer p {
+    color: #8f8f8f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a {
+    line-height: 27.4px;
+}
+
+@media screen and (min-width: 700px) {
+
+    div#principal > main > h1 {
+        font-size: 59px;
+    }
+
+    div#principal > main > p, div#principal > main > div > a {
+        font-size: 24px;
+    }
+
+    div#tela1 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div#tela1 > div {
+        display: flex;
+        flex-direction: column;
+        align-items: left;   
+        width: 30%;
+    }
+    
+    div#tela1 h1 {
+        text-align: left;
+        width: 100%;
+    }
+
+    div#tela1 a {
+        margin-left: 0;
+    }
+
+    div#tela1 > img {
+        width: 30%;
+    }
+
+    div#tela2 > div#caixa-txt-btn {
+        flex-direction: row;
+        justify-content: center;
+        width: 60%;
+    }
+
+    div#tela2 > div#caixa-txt-btn > h1 {
+        text-align: left;
+    }
+
+    div#tela2 a {
+        margin-left: 30px;
+        width: 30%;
+        transform: translateY(-25%);
+    }
+
+    div#tela2 > div#conjunto-img-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div#tela2 > div#conjunto-img-info > div {
+        width: 20%;
+        margin-left: 25px;
+    }
+
+    div#tela2 > div#conjunto-img-info > div:first-child {
+        width: 20%;
+        margin-left: 0px;
+    }
+
+    div#tela2 > div#conjunto-img-info img {
+        width: 100%;
+    }
+
+    div#tela2 > div#conjunto-img-info h2 {
+        width: 100%;
+        transform: translateX(1.5px);
+    }
+
+    div#tela2 > div#conjunto-img-info p {
+        width: 100%;
+        transform: translateX(1.5px);
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+
+    div#principal > header > img {
+        margin-top: 22px;
+        transform: translateX(calc(50vw - 116px));
+    }
+
+    div#principal > main > h1 {
+        font-size: 83px;
+    }
+
+    div#principal > main > p {
+        font-size: 30px;
+    }
+
+    div#principal > main > div > a {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .botao-wf {
+        font-size: 16px;
+    }
+
+    div#tela1 h2 {
+        font-size: 19px;
+    }
+
+    div#tela1 p {
+        font-size: 16px;
+    }
+
+    footer {
+        margin-left: 90px;
+    }
+
+    footer div#esq, footer div#dir {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    footer div#esq > div#baixo {
+        margin-top: 73px;
+    }
+
+    footer div#dir {
+        margin-top: 43px;
+    }
+}
