@@ -67,6 +67,9 @@ function escolher() {
     var num1 = Math.floor(Math.random() * 100) + 1
     var num2 = Math.floor(Math.random() * 100) + 1
     var ope = Math.floor(Math.random() * 5) + 1
+    num1 = 10
+    num2 = 3
+    ope = 4
 
     switch(ope) {
         case 1: 
@@ -104,6 +107,8 @@ function escolher() {
 
 function verificar() {
     acabou = true
+    const dDp = []
+    let lDp = false
     let resposta = 0
     switch(operador) {
         case '+':
@@ -120,15 +125,28 @@ function verificar() {
 
         case '÷':
             resposta = valor1 / valor2
-            resposta = resposta.toFixed(2)
             break;
 
         case 'elevacao':
             resposta = valor1 ** valor2
             break;
     }
-    console.log(`Sua resposta ${resp.value}`)
-    console.log(`Resposta correta ${resposta}`)
+    resposta = String(resposta)
+    for(let c = 0; c < resposta.length; c++) {
+        if(resposta[c] == '.') {
+            lDp = c
+        }
+    }
+    if(lDp != false) {
+        for(let c = (resposta.length - 1); c > lDp; c--) {
+            dDp.push(resposta[c])
+        }
+        if(dDp.length > 2) {
+            resposta = Number(resposta)
+            resposta = resposta.toFixed(2)
+        }
+    }
+    resposta = Number(resposta)
     if(resposta == resp.value) {
         aeP.innerText = 'Você acertou!'
         aeP.style.color = 'green'
