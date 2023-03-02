@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #505050;
+    height: 97vh;
+}
+
+main {
+    height: 700px;
+    width: 500px;
+    background-color: gray;
+}
+
+div#esq {
+    display: inline-block;
+    background-color: blue;
+    width: 70%;
+    height: 100%;
+}
+
+div#dir {
+    display: inline-block;
+    background-color: green;
+    width: 30%;
+    height: 100%;
+}
+
+div.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #505050;
+}
