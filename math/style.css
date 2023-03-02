@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    background-color: #000520;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#princ {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000b27;
+    width: 700px;
+    height: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+div#linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    width: 704px;
+    height: 704px;
+}
+
+div#linha::after {
+    content: "";
+    display: block;
+    z-index: -1;
+    position: absolute;
+    background-image: linear-gradient(180deg, aqua, aqua, transparent);
+    width: 100%;
+    height: 100%;
+    bottom: 50%;
+    right: 50%;
+    transform-origin: bottom right;
+    animation: linhaAnimada 5s linear infinite;
+}
+
+div#linha::before {
+    content: "";
+    display: block;
+    z-index: -1;
+    position: absolute;
+    background-image: linear-gradient(180deg, aqua, aqua, transparent);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform-origin: top left;
+    animation: linhaAnimada 5s linear infinite;
+}
+
+label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+}
+
+input[type=number] {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 150px;
+    height: 20px;
+    background-color: #003565;
+    color: white;
+    transition: background-color .5s;
+}
+
+input[type=number]:focus-within {
+    background-color: #004575;
+}
+
+input[type=number]:disabled {
+    background-color: #00356580;
+}
+
+input[type=button] {
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    width: 70px;
+    height: 20px;
+    background-color: #003565;
+    color: #000;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+input[type=button]:hover {
+    background-color: #00285880;
+}
+
+input[type=button]:disabled {
+    background-color: #00356580;
+    color: #000;
+    cursor: auto;
+}
+
+p#tmpAparecer {
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    top: 100px;
+}
+
+div#tmpPerg {
+    position: absolute;
+    top: calc(100px + 180px);
+}
+
+p#pergunta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    color: white;
+    font-size: 1.8em;
+}
+
+div#tmpRespDiv {
+    position: absolute;
+    top: calc(100px + 200px + 50px);
+}
+
+p#ae {
+    color: white;
+    font-size: 1.7em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100px + 200px + 50px + 73px);
+}
+
+p#rc {
+    color: white;
+    font-size: 1.7em;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100px + 200px + 50px + 50px + 100px);
+}
+
+@keyframes linhaAnimada {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

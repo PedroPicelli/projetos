@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conta</title>
+</head>
+<body>
+    <div id="linha">
+        <div id="princ">
+            <p id="tmpAparecer">Tempo: <strong>Nenhum</strong></p>
+            <div id="tmpPerg">
+                <label for="tmp">Tempo:</label>
+                <div>
+                    <input type="number" name="tmp" id="tmp" min="1" max="60">
+                    <input type="button" value="Começar" id="btn">
+                </div>
+            </div>
+            <div>
+                <p id="pergunta"></p>
+            </div>
+            <div id="tmpRespDiv">
+                <label for="resp">Resposta:</label>
+                <div>
+                    <input type="number" name="resp" id="resp">
+                    <input type="button" value="Enviar" id="enviar">
+                </div>
+            </div>
+            <div id="respFinal">
+                <p id="ae"></p>
+                <p id="rc"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
