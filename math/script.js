@@ -67,9 +67,6 @@ function escolher() {
     var num1 = Math.floor(Math.random() * 100) + 1
     var num2 = Math.floor(Math.random() * 100) + 1
     var ope = Math.floor(Math.random() * 5) + 1
-    num1 = 10
-    num2 = 3
-    ope = 4
 
     switch(ope) {
         case 1: 
