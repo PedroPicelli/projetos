@@ -1,11 +1,17 @@
 @charset "UTF-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #505050;
-    height: 97vh;
+    height: 100vh;
 }
 
 main {
@@ -23,10 +29,17 @@ div#esq {
     height: 100%;
 }
 
-div#resultado {
+div#resultadoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width: 100%;
     background-color: #000000a0;
+}
+
+p#resultado {
+    color: white;
 }
 
 div#esq > div {
